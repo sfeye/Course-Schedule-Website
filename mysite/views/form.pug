@@ -1,0 +1,20 @@
+//- File: /views/form.pug
+
+extends layout
+
+block content
+    h1(id="login") User Login
+
+    form(action="", method="")
+        fieldset
+            span(id="error-span", class="no-error") * 
+            p(id="usr-p")
+                label(for="usr") Username: 
+                input(id="usr", placeholder="Username", name="usr")
+            p(id="pwd-p")
+                label(for="pwd") Password: 
+                input(id="pwd", placeholder="Password", type="password", name="pwd")
+            p(id="enter-p")
+                button(id="enter") Enter
+block scripts
+    script(src="/javascript/form.js")

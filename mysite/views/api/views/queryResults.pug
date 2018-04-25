@@ -1,0 +1,15 @@
+//- File: api/views/queryResults.pug
+extends layout
+
+mixin classTable(classes)
+    table
+            tr
+                each classe in classes
+                    td= classe.id + ' - ' + classe.location
+
+block content
+    h1 Classes
+        p 
+            +classTable(classes)
+    footer
+        a(href='http://localhost:3000/api') Back

@@ -1,0 +1,11 @@
+//- File: api/views/scheduleAPI.pug
+extends layout
+
+mixin addButton(url, buttonText)
+    button(id= "queryButtons")(formaction=url)= buttonText
+
+block content
+    h1 Edit Classes
+    form(id="edit")
+        each query in queries
+            +addButton(query.url, query.text)

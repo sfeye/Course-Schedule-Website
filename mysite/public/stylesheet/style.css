@@ -1,0 +1,112 @@
+/* File: /public/stylesheets/style.css */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 100%;
+}
+
+body {
+    text-align: center;
+    padding-top: 2rem;
+    background-color: rgb(63, 143, 197);
+}
+
+form {
+    width: 50%;
+    margin: 3rem auto;
+    background-color: whitesmoke;
+    padding-top: 2rem;
+}
+form#edit {
+    width: 150px;
+    height: 100%;
+    padding: .5rem;
+    background-color: rgb(78, 175, 255);
+}
+p {
+    width: 90%;
+    height: 3rem;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+    visibility: visible;
+}
+.no-error {
+    visibility: hidden;
+}
+
+#enter-p {
+    text-align: right;
+}
+
+input#usr,
+input#pwd {
+    height: 2rem;
+    width: 14rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid lightgray;
+    background-color: whitesmoke;
+}
+
+button#enter {
+    padding: 6px;
+    background-color:  rgb(78, 175, 255);
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+button#queryButtons {
+    padding: 6px;
+    width: 100px;
+    background-color:  rgb(78, 175, 255);
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-collapse: separate;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+table {
+    width: 90%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+    background-color: rgb(78, 175, 255);
+}
+th {
+    padding: 1rem;
+    width: 10%; 
+    border: 1px solid black;
+}
+td {
+    height: 2.7rem;
+    width: 10%; 
+    font-size: .9rem;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 0;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(78, 175, 255);
+    empty-cells: hide;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+a {
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+}

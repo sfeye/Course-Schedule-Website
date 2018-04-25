@@ -1,0 +1,29 @@
+//- File: api/views/classinfo.pug
+extends layout
+
+mixin classHeader()
+    table
+       tr(id= "complex")
+        td= "ID"
+        td= "COURSE NAME"
+        td= "LOCATION"
+        td= "TIME"
+        td= "DAY"
+
+mixin classTable(classes)
+    table
+        each classe in classes
+            tr
+                td= classe.id
+                td= classe.courseName
+                td= classe.location
+                td= classe.time
+                td= classe.day
+
+block content
+    h1 Classes
+        p 
+            +classHeader()
+            +classTable(classes)
+    footer 
+        a(href='http://localhost:3000/api') Back

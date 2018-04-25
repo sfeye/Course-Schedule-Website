@@ -1,0 +1,44 @@
+//- File: api/views/index.pug
+extends layout
+
+mixin tableSchedule(classes)
+        thead
+            tr
+                each day in ['HR', 'M', 'T', 'W', 'R', 'F']
+                    th= day
+        tbody 
+            each time in ["09.00", "10.00", "11.00", "12.00", "13.00", "14.00", "15.00", "16.00", "17.00", "18.00"]
+                tr
+                    td(id=day)= time
+                    each classe in classes 
+                        if classe.time == time && classe.day == 'MWF'                     
+                            td= classe.id + " - " + classe.location
+                            td= ""
+                            td= classe.id + " - " + classe.location
+                            td= ""
+                            td= classe.id + " - " + classe.location
+                        else if classe.time == time && classe.day == 'TR'
+                            td= ""                 
+                            td= classe.id + " - " + classe.location
+                            td= ""
+                            td= classe.id + " - " + classe.location
+                            td= ""
+                        else if classe.time == time && classe.day == 'W' 
+                            td= ""
+                            td= ""                    
+                            td= classe.id + " - " + classe.location
+                            td= ""
+                            td= ""
+                        else if classe.time == time && classe.day == 'MTRF'                     
+                            td= classe.id + " - " + classe.location
+                            td= classe.id + " - " + classe.location
+                            td= ""
+                            td= classe.id + " - " + classe.location
+                            td= classe.id + " - " + classe.location
+
+block content
+    h1= "Weekly Schedule"
+    table
+        +tableSchedule(classes)
+    footer
+        a(href='http://localhost:3000/api') Back
